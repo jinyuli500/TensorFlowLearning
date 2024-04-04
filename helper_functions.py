@@ -38,11 +38,11 @@ def create_tensorboard_callback(dir_name, experiment_name):
     print(f"saving tensorboard log files to: {log_dir}")
     return tensorboard_callback
 
-def unzip_data(filename):
+def unzip_data():
     """
     unzip downloaded data
     """
     import zipfile
-    zip_ref = zipfile.ZipFile(filename)
+    zip_ref = zipfile.ZipFile("")
     zip_ref.extractall()
     zip_ref.close()
