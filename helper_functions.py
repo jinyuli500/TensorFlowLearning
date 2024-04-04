@@ -42,6 +42,7 @@ def unzip_data(filename):
     """
     unzip downloaded data
     """
+    import zipfile
     zip_ref = zipfile.ZipFile(filename)
     zip_ref.extractall()
     zip_ref.close()
