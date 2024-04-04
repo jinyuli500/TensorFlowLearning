@@ -30,12 +30,18 @@ def plot_loss_curves(history):
 
 
 def create_tensorboard_callback(dir_name, experiment_name):
+    """
+    create tensorboard callback
+    """
     log_dir = dir_name + "/" + experiment_name + "/" + datetime.datetime.now().strftime("%Y%m%D-%H%M%S")
     tensorboard_callback = tf.keras.callbacks.TensorBoard(log_dir=log_dir)
     print(f"saving tensorboard log files to: {log_dir}")
     return tensorboard_callback
 
 def unzip_data(filename):
+    """
+    unzip downloaded data
+    """
     zip_ref = zipfile.ZipFile(filename)
     zip_ref.extractall()
     zip_ref.close()
